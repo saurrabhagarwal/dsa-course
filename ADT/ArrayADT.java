@@ -108,6 +108,7 @@ public class ArrayADT {
             }
             return sum / length;
         }
+        
     }
 
     public static void main(String[] args) {
