@@ -1,4 +1,4 @@
-package dsa;
+package dsa.array;
 
 public class ArrayADT3 {
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class ArrayADT3 {
         findMissingElementsInSortedArray3(new int[]{1, 2, 3, 5, 6, 9});
 
         findDuplicatesInSortedArray(new int[]{3, 6, 8, 8, 10, 12, 15, 15, 15, 20});
-        findCountOfDuplicatesInSortedArray(new int[]{3, 6, 8, 8, 10, 12, 15, 15, 15, 20});
+        findCountOfDuplicatesInSortedArray(new int[]{3, 6, 8, 8, 10, 12, 15, 15, 15, 15});
         findCountOfDuplicatesInSortedArray2(new int[]{3, 6, 8, 8, 10, 12, 15, 15, 15, 20});
 
         findDuplicatesInUnSortedArray(new int[]{3, 6, 8, 8, 10, 12, 15, 15, 15, 20});
@@ -83,11 +83,25 @@ public class ArrayADT3 {
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] == arr[i + 1]) {
                 int j = i + 1;
-                while (arr[j] == arr[i])
+                while (j < arr.length && arr[j] == arr[i])
                     j++;
                 System.out.println(arr[i] + " is appearing " + (j - i) + " times");
                 i = j - 1;
             }
+        }
+        System.out.println();
+    }
+
+    public static void findCountOfDuplicatesInSortedArray() {
+        int[] arr = new int[]{3, 6, 8, 8, 10, 12, 15, 15, 15, 20};
+        for (int i = 0; i < arr.length - 1; i++) {
+            int count = 1;
+            while (i < arr.length - 1 && arr[i] == arr[i + 1]) {
+                count++;
+                i++;
+            }
+            if (count > 1)
+                System.out.println(arr[i] + " is appearing " + (count) + " times");
         }
         System.out.println();
     }
@@ -152,7 +166,7 @@ public class ArrayADT3 {
             if (arr[i] + arr[j] == k) {
                 System.out.println("pair " + arr[i] + " " + arr[j]);
                 i++;
-                j++;
+                j--;
             } else if (arr[i] + arr[j] > k)
                 j--;
             else i++;
