@@ -177,8 +177,7 @@ public class LL {
             q = p;
             p = p.next;
         }
-        if (p == null)
-            return null;
+        if (p == null) return null;
         if (p == first) {
             first = first.next;
             return first;
@@ -194,8 +193,7 @@ public class LL {
     public static boolean checkSorted(Node p) {
         int num = p.data;
         while (p != null) {
-            if (num > p.data)
-                return false;
+            if (num > p.data) return false;
             num = p.data;
             p = p.next;
         }
@@ -260,8 +258,7 @@ public class LL {
         if (p != null) {
             reverseList_Recursive(p, p.next);
             p.next = q;
-        } else
-            first = q;
+        } else first = q;
     }
 
     //add two lists
@@ -279,7 +276,7 @@ public class LL {
         Node third;
         Node last;
         if (first.data < second.data) {
-            third =last = first;
+            third = last = first;
             first = first.next;
             last.next = null;
         } else {
@@ -301,11 +298,47 @@ public class LL {
                 last.next = null;
             }
         }
-        if (first != null)
-            last.next = first;
-        if (second != null)
-            last.next = second;
+        if (first != null) last.next = first;
+        if (second != null) last.next = second;
         return third;
+    }
+
+    public static boolean checkLoop(Node first) {
+        Node p = first;
+        Node q = first;
+        do {
+            p = p.next;
+            q = q.next;
+            if (q != null) q = q.next;
+        } while (p != null && q != null && p != q);
+        return p == q;
+    }
+
+    public static Node findMiddleNode(Node head) {
+        Node p = head;
+        Node q = head;
+        while (q != null) {
+            q = q.next;
+            if (q != null) q = q.next;
+            if (q != null) p = p.next;
+        }
+        System.out.println("middle element " + p.data);
+        return p;
+    }
+
+    public static Node findIntersectionNode(Node head1, Node head2) {
+        while (head2 != null) {
+            Node p = head1;
+            while (p != null) {
+                if (p == head2) {
+                    System.out.println("intersection element " + head2.data);
+                    return head2;
+                }
+                p = p.next;
+            }
+            head2 = head2.next;
+        }
+        return null;
     }
 
     public static void main(String[] args) {
@@ -347,8 +380,23 @@ public class LL {
         System.out.println(reverseList(first));
         System.out.println(concatLists(create2(new int[]{1, 3, 2, 5}), create2(new int[]{4, 3, 1, 6})));
 
-        System.out.println(mergeLists(create2(new int[]{1, 3, 4, 6}), create2(new int[]{0,2,6,7,8})));
+        System.out.println(mergeLists(create2(new int[]{1, 3, 4, 6}), create2(new int[]{0, 2, 6, 7, 8})));
 
+        Node p = create2(new int[]{1, 3, 4, 6});
+        Node q = create2(new int[]{2, 5});
+        p.next = q;
+        q.next = p;
+        System.out.println(checkLoop(p));
+        System.out.println(checkLoop(create2(new int[]{1, 3, 4, 6})));
+
+        System.out.println(findMiddleNode(create2(new int[]{1, 3, 4, 6})));
+        System.out.println(findMiddleNode(create2(new int[]{1, 3, 4, 6, 7})));
+        System.out.println(findMiddleNode(create2(new int[]{1, 3, 4, 6, 7, 2})));
+        System.out.println(findMiddleNode(create2(new int[]{1, 3, 4, 6, 7, 2, 3})));
+
+        Node c = create2(new int[]{7, 8, 9});
+
+        System.out.println(findIntersectionNode(concatLists(create2(new int[]{1, 3, 4, 6}), c), concatLists(create2(new int[]{11, 32}), c)));
     }
 }
 
