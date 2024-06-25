@@ -1,6 +1,4 @@
-package dsa;
-
-import dsa.array.Array;
+package dsa.Leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;

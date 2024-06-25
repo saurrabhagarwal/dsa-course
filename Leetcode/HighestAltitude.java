@@ -1,4 +1,4 @@
-package dsa.Lrrtcode;
+package dsa.Leetcode;
 
 public class HighestAltitude {
     public static void main(String[] args) {

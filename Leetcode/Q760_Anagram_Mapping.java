@@ -1,4 +1,4 @@
-package dsa.Lrrtcode;
+package dsa.Leetcode;
 
 import java.util.*;
 

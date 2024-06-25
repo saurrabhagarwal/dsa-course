@@ -1,6 +1,5 @@
-package dsa;
+package dsa.Leetcode;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class Leetcode_Array4 {
