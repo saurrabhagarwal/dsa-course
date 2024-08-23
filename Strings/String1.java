@@ -2,6 +2,7 @@ package dsa.Strings;
 
 public class String1 {
     public static void main(String[] args) {
+        
         char c = 'A';
         int n = 65;
         System.out.println(String.format("%d", (int) c));
