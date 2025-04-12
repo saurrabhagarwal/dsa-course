@@ -2,7 +2,7 @@ package dsa;
 
 import java.util.Arrays;
 
-public class ArrayADT {
+class ArrayADT3 {
     static class Array {
         private int[] items;
         private int length;

@@ -24,7 +24,7 @@ public class StreamLearn {
         System.out.println(out);
     }
     private static void copyFile() throws IOException {
-        try (FileInputStream fis = new FileInputStream("/workspaces/dsa-course/JavaLearn/Source.txt");
+        try (FileInputStream fis = new FileInputStream("JavaLearn/Source.txt");
              FileOutputStream fos = new FileOutputStream("Dest.txt")) {
             int b;
             while ((b = fis.read()) != -1) {
@@ -37,7 +37,7 @@ public class StreamLearn {
     }
 
     private static void mergeFile() throws IOException {
-        try (FileInputStream fis1 = new FileInputStream("/workspaces/dsa-course/JavaLearn/Source.txt");
+        try (FileInputStream fis1 = new FileInputStream("JavaLearn/Source.txt");
              FileInputStream fis2 = new FileInputStream("Dest.txt");
              FileOutputStream fos = new FileOutputStream("Merge.txt")) {
             int b;
