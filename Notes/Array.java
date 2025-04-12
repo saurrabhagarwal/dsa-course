@@ -24,6 +24,7 @@ public class Array {
         findDuplicates(new int[]{7, 1, 2, 3, 3, 4, 5, 5, 5, 6, 7});
         findPairInSortedArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8}, 8);
         findMinMax(new int[]{2, 1, 4, 5, 9, 10, 34, 0});
+        moveZeroesToEnd(new int[]{0,4,0,5,3,0,7,0,9,1,1});
     }
 
     //insert at any index - right shift
@@ -273,5 +274,20 @@ public class Array {
         }
         System.out.println("min " + min);
         System.out.println("max " + max);
+    }
+
+    static void moveZeroesToEnd(int[] arr) {
+        System.out.println(Arrays.toString(arr));
+        int l = 0;
+        int r = arr.length - 1;
+        while (l < r) {
+            while (arr[l] > 0)
+                l++;
+            while (arr[r] == 0)
+                r--;
+            if (l < r)
+                swap(arr, l, r);
+        }
+        System.out.println(Arrays.toString(arr));
     }
 }
