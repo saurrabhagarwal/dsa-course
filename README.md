@@ -14,6 +14,7 @@ This document contains all 150 LeetCode problems from the NeetCode list, organiz
 7. [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) – Use sets per row, column, subgrid. **Time:** O(1), **Space:** O(1)  
 8. [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) – Prefix each string with length and delimiter. **Time:** O(n), **Space:** O(n)  
 9. [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) – Use set and only start at sequence beginnings. **Time:** O(n), **Space:** O(n)  
+
 10. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) – Kadane’s algorithm. **Time:** O(n), **Space:** O(1)  
 11. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) – Track both max and min product due to negatives. **Time:** O(n), **Space:** O(1)  
 12. [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) – Binary search for pivot. **Time:** O(log n), **Space:** O(1)  
