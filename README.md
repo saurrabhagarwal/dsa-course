@@ -47,7 +47,7 @@ This document contains all 150 LeetCode problems from the NeetCode list, organiz
 1. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) – Use stack to check matching. **Time:** O(n), **Space:** O(n)  
 2. [Min Stack](https://leetcode.com/problems/min-stack/) – Stack with supplemental min tracking. **Time:** O(1) ops, **Space:** O(n)  
 3. [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) – Stack eval of tokens. **Time:** O(n), **Space:** O(n)  
-4. [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) – DFS/backtracking with pruning. **Time:** Catalan, **Space:** O(n)  
+4. [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) – BACKTRACKING DFS/backtracking with pruning. **Time:** Catalan, **Space:** O(n)  
 5. [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) – Stack tracking indices for resolution. **Time:** O(n), **Space:** O(n)  
 6. [Car Fleet](https://leetcode.com/problems/car-fleet/) – Sort + compute time to target, stack simulate fleets. **Time:** O(n log n), **Space:** O(n)  
 
